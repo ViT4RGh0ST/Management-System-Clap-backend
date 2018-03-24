@@ -24,6 +24,19 @@ class CreateMembersTable extends Migration
             $table->string('sexo', 1);
             $table->string('tipo_discapacidad');
             $table->string('tipo_pension');
+            $table->string('estado_cvivil');     
+            $table->string('numero_celular');      
+            $table->string('numero_oficina');      
+            $table->string('correo');
+            $table->string('nivel_instruccion');         
+            $table->string('es_empleado');   
+            $table->string('profesion'); 
+            $table->string('tipo_institucion');        
+            $table->float('ingreso_mensual', 8,3);
+            $table->string('parentesco');  
+            $table->string('embarazo_precoz', 1);       
+            $table->string('clasificacion_imgreso');
+            $table->string('es_jefe', 1);
 
 
 
