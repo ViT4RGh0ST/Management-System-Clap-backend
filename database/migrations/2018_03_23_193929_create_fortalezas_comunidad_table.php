@@ -15,7 +15,7 @@ class CreateFortalezasComunidadTable extends Migration
     {
         Schema::create('fortalezas_comunidad', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('fortaleza_comunoidad');
+            $table->string('fortaleza_comunidad');
             
             $table->timestamps();
         });

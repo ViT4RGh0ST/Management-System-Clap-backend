@@ -16,10 +16,11 @@ class CreateFamiliesTable extends Migration
         Schema::create('familias', function (Blueprint $table) {
             $table->increments('id');
             $table->string('cedula_jefe');
-            $table->string('numero_hogar');    
+            $table->float('parentesco');
             $table->string('clasificacion_ingreso');
             $table->string('actividad_comercial');      
             $table->float('ingreso_mensual', 8,3);
+         
 
             $table->timestamps();
         });

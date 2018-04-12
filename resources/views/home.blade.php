@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -33,17 +34,17 @@
                             <div style="padding: 30px">
                                 <div class="row">
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" id="form_username" name="form[username]" autocomplete="off" class="uppercase" maxlength="10">
+                                        <input type="text" id="form_username" name="cedula[]" autocomplete="off" class="uppercase" maxlength="10">
                                         <label class="" for="form_username">Cédula (inicia con V o E)</label>
                                     </div>
 
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" id="form_nombre" name="form[nombre]" autocomplete="off" class="" maxlength="30">
+                                        <input type="text" id="form_nombre" name="nombres[]" autocomplete="off" class="" maxlength="30">
                                         <label class="" for="form_nombre">Nombres</label>
                                     </div>
 
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" id="form_apellido" name="form[apellido]" autocomplete="off" class="" maxlength="30">
+                                        <input type="text" id="form_apellido" name="apellidos[]" autocomplete="off" class="" maxlength="30">
                                         <label class="" for="form_apellido">Apellidos</label>
                                     </div>
 
@@ -63,7 +64,7 @@
                                                 <li class=""><span>Femenino</span></li>
                                                 <li class=""><span>Masculino</span></li>
                                             </ul>
-                                            <select id="form_sex" name="form[sex]" data-select-id="cadc1ffe-4f19-cc35-18cc-02fac73aff69" class="initialized">
+                                            <select id="form_sex" name="sexo[]" data-select-id="cadc1ffe-4f19-cc35-18cc-02fac73aff69" class="initialized">
                                                 <option value="">Seleccione</option>
                                                 <option value="F">Femenino</option>
                                                 <option value="M">Masculino</option>
@@ -85,7 +86,7 @@
                                                 <li class=""><span>Viudo (a)</span></li>
                                                 <li class=""><span>Concubino (a)</span></li>
                                             </ul>
-                                            <select id="form_edocivil" name="form[sex]" data-select-id="cadc1ffe-4f19-cc35-18cc-02fac73aff69" class="initialized">
+                                            <select id="form_edocivil" name="estado_civil[]" data-select-id="cadc1ffe-4f19-cc35-18cc-02fac73aff69" class="initialized">
                                                 <option value="">Seleccione</option>
                                                 <option value="S">Soltero (a)</option>
                                                 <option value="C">Casado (a)</option>
@@ -101,12 +102,12 @@
 
                                 
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" name="form[comunidad]" id="form_comunidad" autocomplete="off" maxlength="2">
+                                        <input type="text" name="tiempo_comunidad[]" id="form_comunidad" autocomplete="off" maxlength="2">
                                         <label for="form_comunidad">Tiempo en la comunidad (años)</label>
                                         
                                     </div>
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="email" id="form_correo" name="form[correo]" autocomplete="off" class="" maxlength="30" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" required>
+                                        <input type="email" id="form_correo" name="correo[]" autocomplete="off" class="" maxlength="30" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" required>
                                         <label class="" for="form_correo">Correo</label>
                                     </div>
                                 
@@ -119,13 +120,13 @@
                                             <p>
                                                 <label>¿Posee alguna discapacidad?</label>
                                                 <br>
-                                                <input name="group1" type="radio" id="radio_discapno" />
+                                                <input name="tipo_discapacidad[]" type="radio" id="radio_discapno" />
                                                 <label for="radio_discapno">No</label>
 
-                                                <input name="group1" type="radio" id="radio_discapsi" />
+                                                <input name="tipo_discapacidad[]1" type="radio" id="radio_discapsi" />
                                                 <label for="radio_discapsi">Si</label>
                                                 <div class="input-field">
-                                                    <input type="text" disabled id="form_discap" name="form[discap]" autocomplete="off" class="class_discap" maxlength="30">
+                                                    <input type="text" disabled id="form_discap" name="tipo_discapacidad[]" autocomplete="off" class="class_discap" maxlength="30">
                                                     <label for="form_discap">Especifique</label>                                    
                                                 </div>
                                             <p>
@@ -135,14 +136,14 @@
                                             <p>
                                                 <label>¿Posee alguna pensión?</label>
                                                 <br>
-                                                <input name="group2" type="radio" id="radio_penNo" />
+                                                <input name="tipo_pension[]" type="radio" id="radio_penNo" />
                                                 <label for="radio_penNo">No</label>
 
-                                                <input name="group2" type="radio" id="radio_penSi" />
+                                                <input name="tipo_pension[]" type="radio" id="radio_penSi" />
                                                 <label for="radio_penSi">Si</label>
 
                                                 <div class="input-field">
-                                                    <input type="text" disabled id="form_pension" name="form[pension]" autocomplete="off" class="class_discap" maxlength="30">
+                                                    <input type="text" disabled id="form_pension" name="tipo_institucion[]" autocomplete="off" class="class_discap" maxlength="30">
                                                     <label for="form_pen">Institución</label>                                    
                                                 </div>
                                             </p>
@@ -151,10 +152,10 @@
                                             <p>
                                                 <label>Esta registrado en el CNE?</label>
                                                 <br>
-                                                <input name="group3" type="radio" id="radio_cneNo" />
+                                                <input name="cne" type="radio" id="radio_cneNo" />
                                                 <label for="radio_cneNo">No</label>
 
-                                                <input name="group3" type="radio" id="radio_cneSi" />
+                                                <input name="cne" type="radio" id="radio_cneSi" />
                                                 <label for="radio_cneSi">Si</label>     
                                             </p>
                                         </div>
@@ -162,10 +163,11 @@
                                             <p>
                                                 <label>¿Presenta embarazo precoz?</label>
                                                 <br>
-                                                <input name="group4" type="radio" id="radio_embzno" />
+                                                <input name="embarazo_precoz" type="radio" id="radio_embzno" />
                                                 <label for="radio_embzno">No</label>
 
-                                                <input name="group4" type="radio" id="radio_embzsi" />
+                                                <input name="embarazo_precoz" type="radio" id="
+                                                radio_embzsi" />
                                                 <label for="radio_embzsi">Si</label>
                                              
                                             <p>
@@ -175,17 +177,13 @@
 
                                 <div class="row">
                                     <div class="input-field col s12 m4">
-                                        <input type="tel" id="form_cell" name="form[phone]" class="" autocomplete="off">
+                                        <input type="tel" id="form_cell" name="numero_celular[]" class="" autocomplete="off">
                                         <label for="form_cell">Teléfono Celular</label>
                                     </div>
 
+                                    
                                     <div class="input-field col s12 m4">
-                                        <input type="tel" id="form_hab" name="form[hab]" class="" autocomplete="off">
-                                        <label for="form_hab">Teléfono de Habitación</label>
-                                    </div>
-
-                                    <div class="input-field col s12 m4">
-                                        <input type="tel" id="form_ofic" name="form[ofic]" class="" autocomplete="off">
+                                        <input type="tel" id="form_ofic" name="numero_oficina[]" class="" autocomplete="off">
                                         <label for="form_ofic">Teléfono de Oficina</label>
                                     </div>
                                 </div>
@@ -205,82 +203,86 @@
                                     <div class="row">
                                         <div class="col s4">
                                             <p>
-                                                <input type="radio" class="with-gap" id="form_educ1" name="educacion" class="" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_educ1" name="nivel_instruccion" class="" autocomplete="off">
                                                 <label for="form_educ1">Sin Instrucción</label>
                                             </p>
 
                                             <p>
-                                                <input type="radio" class="with-gap" id="form_educ2" name="educacion" class="" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_educ2" name="nivel_instruccion" class="" autocomplete="off">
                                                 <label for="form_educ2">Básica</label>
                                             </p>
 
                                             <p>
-                                                <input type="radio" class="with-gap" id="form_educ3" name="educacion" class="" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_educ3" name="nivel_instruccion" class="" autocomplete="off">
                                                 <label for="form_educ3">Bachiller</label>
                                             </p>
 
                                             <p>
-                                                <input type="radio" class="with-gap" id="form_educ4" name="educacion" class="" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_educ4" name="nivel_instruccion" class="" autocomplete="off">
                                                 <label for="form_educ4">Técnico Medio</label>
                                             </p>
                                         </div>
 
                                         <div class="col s4">
                                             <p>
-                                                <input type="radio" class="with-gap" id="form_educ5" name="educacion" class="" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_educ5" name="nivel_instruccion" class="" autocomplete="off">
                                                 <label for="form_educ5">Técnico Superior</label>
                                             </p>
 
                                             <p>
-                                                <input type="radio" class="with-gap" id="form_educ6" name="educacion" class="" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_educ6" name="nivel_instruccion" class="" autocomplete="off">
                                                 <label for="form_educ6">Universitario</label>
                                             </p>
 
                                             <p>
-                                                <input type="radio" class="with-gap" id="form_educ7" name="educacion" class="" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_educ7" name="nivel_instruccion" class="" autocomplete="off">
                                                 <label for="form_educ7">Post Grado</label>
                                             </p>
                                         </div>
                                         
 
                                         <div class="col s3">
-                                            <input type="radio" class="with-gap" id="form_trab1" name="trabajo" class="" autocomplete="off">
+                                            <input type="radio" class="with-gap" id="form_trab1" name="es_empleado" class="" autocomplete="off">
                                             <label for="form_trab1">Si</label>
 
-                                            <input type="radio" class="with-gap" id="form_trab2" name="trabajo" class="" autocomplete="off">
+                                            <input type="radio" class="with-gap" id="form_trab2" name="es_empleado" class="" autocomplete="off">
                                             <label for="form_trab2">No</label>
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="input-field col s6">
-                                            <input type="text" id="form_profesion" name="form[profesion]" class="" autocomplete="off">
+                                            <input type="text" id="form_profesion" name="profesion[]" class="" autocomplete="off">
                                             <label for="form_profesion">Indique a qué se dedica</label>
                                         </div>
 
                                         <div class="col s6">
                                             <label>Clasificación del ingreso Familiar</label><br>
                                             
-                                                <input type="radio" class="with-gap" id="form_ingres1" name="ingreso" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_ingres1" name="clasificacion_ingreso" autocomplete="off">
                                                 <label for="form_ingres1">Diario</label>
                                             
                                             
-                                                <input type="radio" class="with-gap" id="form_ingres2" name="ingreso" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_ingres2" name="clasificacion_ingreso" autocomplete="off">
                                                 <label for="form_ingres2">Semanal</label>
                                             
                                             
-                                                <input type="radio" class="with-gap" id="form_ingres3" name="ingreso" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_ingres3" name="clasificacion_ingreso" autocomplete="off">
                                                 <label for="form_ingres3">Quincenal</label>
                                             
                                             
-                                                <input type="radio" class="with-gap" id="form_ingres4" name="ingreso" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_ingres4" name="clasificacion_ingreso" autocomplete="off">
                                                 <label for="form_ingres4">Mensual</label>
                                             
                                             
-                                                <input type="radio" class="with-gap" id="form_ingres5" name="ingreso" autocomplete="off">
+                                                <input type="radio" class="with-gap" id="form_ingres5" name="clasificacion_ingreso" autocomplete="off">
                                                 <label for="form_ingres5">Por Trabajo Realizado</label>
+
+                                                
                                         </div>
+                                         
                                     </div>
+                                    
                                 </div>
 
 
@@ -311,3 +313,9 @@
     </div>
 </div>
 @endsection
+
+
+
+
+
+                                        
