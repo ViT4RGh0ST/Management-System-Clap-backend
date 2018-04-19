@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header"></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,37 +15,53 @@
                         </div>
                     @endif
 
-                    <div class="row center">
-          <a class="waves-effect waves-light btn modal-trigger" href="#registro">Registro</a>
-                    </div>
+                    
                 </div>
             </div>
 
-
-                    
-                    <div id="registro" class="modal">
+          <div class="row center">
+          <a class="waves-effect waves-light btn modal-trigger" href="#registro">Registro</a>
+        </div>          
+        
+<div id="registro" class="modal">
     <div class="modal-content">
       <center>
             <div class="z-depth-1 white row">
                 <div class="clap col s12"><h5 class="white-text">Registro de Jefe Familiar</h5></div>
                 <div class="row" style="margin-bottom: 0px">
                     <div class="col s12">
-                        <form method="post" action="" id="register-form" class="col s12" autocomplete="off">
+                        
+                        <form method="post" action="registro" id="register-form" class="col s12" autocomplete="off">
                             <div style="padding: 30px">
                                 <div class="row">
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" id="form_username" name="cedula[]" autocomplete="off" class="uppercase" maxlength="10">
+                                        <input type="text" id="form_username" name="cedula" autocomplete="off" class="uppercase" maxlength="10">
+
                                         <label class="" for="form_username">Cédula (inicia con V o E)</label>
+                                         
+                                    </div>
+                                  
+
+                                    <div class="input-field col s12 m6 l3">
+                                        <input type="text" id="form_nombre" name="primer_nombre" autocomplete="off" class="" maxlength="30">
+                                        
+                                        <label class="" for="form_nombre">Primer Nombre</label>
+                                        
+                                    </div>
+
+                                     <div class="input-field col s12 m6 l3">
+                                        <input type="text" id="form_nombre" name="segundo_nombre" autocomplete="off" class="" maxlength="30">
+                                        <label class="" for="form_nombre">Segundo Nombre</label>
                                     </div>
 
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" id="form_nombre" name="nombres[]" autocomplete="off" class="" maxlength="30">
-                                        <label class="" for="form_nombre">Nombres</label>
+                                        <input type="text" id="form_apellido" name="primer_apellido" autocomplete="off" class="" maxlength="30">
+                                        <label class="" for="form_apellido">Primer Apellido</label>
                                     </div>
 
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" id="form_apellido" name="apellidos[]" autocomplete="off" class="" maxlength="30">
-                                        <label class="" for="form_apellido">Apellidos</label>
+                                        <input type="text" id="form_apellido" name="segundo_apellido" autocomplete="off" class="" maxlength="30">
+                                        <label class="" for="form_apellido">Segundo Apellido</label>
                                     </div>
 
                                     <div class="input-field col s12 m6 l3">
@@ -64,7 +80,7 @@
                                                 <li class=""><span>Femenino</span></li>
                                                 <li class=""><span>Masculino</span></li>
                                             </ul>
-                                            <select id="form_sex" name="sexo[]" data-select-id="cadc1ffe-4f19-cc35-18cc-02fac73aff69" class="initialized">
+                                            <select id="form_sex" name="sexo" data-select-id="cadc1ffe-4f19-cc35-18cc-02fac73aff69" class="initialized">
                                                 <option value="">Seleccione</option>
                                                 <option value="F">Femenino</option>
                                                 <option value="M">Masculino</option>
@@ -86,7 +102,7 @@
                                                 <li class=""><span>Viudo (a)</span></li>
                                                 <li class=""><span>Concubino (a)</span></li>
                                             </ul>
-                                            <select id="form_edocivil" name="estado_civil[]" data-select-id="cadc1ffe-4f19-cc35-18cc-02fac73aff69" class="initialized">
+                                            <select id="form_edocivil" name="estado_civil" data-select-id="cadc1ffe-4f19-cc35-18cc-02fac73aff69" class="initialized">
                                                 <option value="">Seleccione</option>
                                                 <option value="S">Soltero (a)</option>
                                                 <option value="C">Casado (a)</option>
@@ -102,12 +118,12 @@
 
                                 
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" name="tiempo_comunidad[]" id="form_comunidad" autocomplete="off" maxlength="2">
+                                        <input type="text" name="tiempo_comunidad" id="form_comunidad" autocomplete="off" maxlength="2">
                                         <label for="form_comunidad">Tiempo en la comunidad (años)</label>
                                         
                                     </div>
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="email" id="form_correo" name="correo[]" autocomplete="off" class="" maxlength="30" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" required>
+                                        <input type="email" id="form_correo" name="correo" autocomplete="off" class="" maxlength="30" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" required>
                                         <label class="" for="form_correo">Correo</label>
                                     </div>
                                 
@@ -120,13 +136,13 @@
                                             <p>
                                                 <label>¿Posee alguna discapacidad?</label>
                                                 <br>
-                                                <input name="tipo_discapacidad[]" type="radio" id="radio_discapno" />
+                                                <input name="tipo_discapacidad" type="radio" class="with-gap" id="radio_discapno" />
                                                 <label for="radio_discapno">No</label>
 
-                                                <input name="tipo_discapacidad[]1" type="radio" id="radio_discapsi" />
+                                                <input name="tipo_discapacidad" type="radio" class="with-gap" id="radio_discapsi" />
                                                 <label for="radio_discapsi">Si</label>
                                                 <div class="input-field">
-                                                    <input type="text" disabled id="form_discap" name="tipo_discapacidad[]" autocomplete="off" class="class_discap" maxlength="30">
+                                                    <input type="text" disabled id="form_discap" name="tipo_discapacidad" autocomplete="off" class="class_discap" maxlength="30">
                                                     <label for="form_discap">Especifique</label>                                    
                                                 </div>
                                             <p>
@@ -136,14 +152,14 @@
                                             <p>
                                                 <label>¿Posee alguna pensión?</label>
                                                 <br>
-                                                <input name="tipo_pension[]" type="radio" id="radio_penNo" />
+                                                <input name="tipo_pension" type="radio" class="with-gap" id="radio_penNo" />
                                                 <label for="radio_penNo">No</label>
 
-                                                <input name="tipo_pension[]" type="radio" id="radio_penSi" />
+                                                <input name="tipo_pension" type="radio" class="with-gap" id="radio_penSi" />
                                                 <label for="radio_penSi">Si</label>
 
                                                 <div class="input-field">
-                                                    <input type="text" disabled id="form_pension" name="tipo_institucion[]" autocomplete="off" class="class_discap" maxlength="30">
+                                                    <input type="text" disabled id="form_pension" name="tipo_institucion" autocomplete="off" class="class_discap" maxlength="30">
                                                     <label for="form_pen">Institución</label>                                    
                                                 </div>
                                             </p>
@@ -152,10 +168,10 @@
                                             <p>
                                                 <label>Esta registrado en el CNE?</label>
                                                 <br>
-                                                <input name="cne" type="radio" id="radio_cneNo" />
+                                                <input name="cne" type="radio" class="with-gap" id="radio_cneNo" />
                                                 <label for="radio_cneNo">No</label>
 
-                                                <input name="cne" type="radio" id="radio_cneSi" />
+                                                <input name="cne" type="radio" class="with-gap" id="radio_cneSi" />
                                                 <label for="radio_cneSi">Si</label>     
                                             </p>
                                         </div>
@@ -163,11 +179,10 @@
                                             <p>
                                                 <label>¿Presenta embarazo precoz?</label>
                                                 <br>
-                                                <input name="embarazo_precoz" type="radio" id="radio_embzno" />
+                                                <input name="embarazo_precoz" type="radio" class="with-gap" id="radio_embzno" />
                                                 <label for="radio_embzno">No</label>
 
-                                                <input name="embarazo_precoz" type="radio" id="
-                                                radio_embzsi" />
+                                                <input name="embarazo_precoz" type="radio" class="with-gap" id="radio_embzsi" />
                                                 <label for="radio_embzsi">Si</label>
                                              
                                             <p>
@@ -177,13 +192,17 @@
 
                                 <div class="row">
                                     <div class="input-field col s12 m4">
-                                        <input type="tel" id="form_cell" name="numero_celular[]" class="" autocomplete="off">
+                                        <input type="tel" id="form_cell" name="numero_celular" class="" autocomplete="off">
                                         <label for="form_cell">Teléfono Celular</label>
                                     </div>
 
-                                    
                                     <div class="input-field col s12 m4">
-                                        <input type="tel" id="form_ofic" name="numero_oficina[]" class="" autocomplete="off">
+                                        <input type="tel" id="form_hab" name="numero_hogar" class="" autocomplete="off">
+                                        <label for="form_hab">Teléfono de Habitación</label>
+                                    </div>
+
+                                    <div class="input-field col s12 m4">
+                                        <input type="tel" id="form_ofic" name="numero_oficina" class="" autocomplete="off">
                                         <label for="form_ofic">Teléfono de Oficina</label>
                                     </div>
                                 </div>
@@ -252,7 +271,7 @@
 
                                     <div class="row">
                                         <div class="input-field col s6">
-                                            <input type="text" id="form_profesion" name="profesion[]" class="" autocomplete="off">
+                                            <input type="text" id="form_profesion" name="profesion" class="" autocomplete="off">
                                             <label for="form_profesion">Indique a qué se dedica</label>
                                         </div>
 
@@ -276,22 +295,33 @@
                                             
                                             
                                                 <input type="radio" class="with-gap" id="form_ingres5" name="clasificacion_ingreso" autocomplete="off">
-                                                <label for="form_ingres5">Por Trabajo Realizado</label>
-
-                                                
-                                        </div>
-                                         
-                                    </div>
-                                    
+                                                <label for="form_ingres5">Por Trabajo Realizado</label>                                  
+                                        </div>                               
+                                    </div>         
                                 </div>
 
-
                                 <div class="row blank lighten-4" style="margin-bottom: 0px; height: 100px">
-                                    <div class="form-actions col s12" style="padding-top: 18px">
-                                        <button id="send-button" type="submit" data-callback="onSubmit" class="col s12 offset-m3 m6 btn btn-medium waves-effect clap g-recaptcha">Continuar</button>
+                                   
+                                    <div  class="form-actions col s12" style="padding-top: 18px">
+                                    
+                                        <button  id="send-button" type="submit" data-callback="onSubmit" class="col s12 offset-m3 m6 btn btn-medium waves-effect clap g-recaptcha"> Continuar</button>
+                                         
                                     </div>
                                 </div>
                             </form>
+                            
+                         @if ($errors->any())
+
+                          <p>Por favor corrige los errores</p>
+                          <div class="alert alert-danger">
+                           <ul>
+                             @foreach ($errors->all() as $error)
+                               <li>{{ $error }}</li>
+                             @endforeach
+                           </ul>
+                           </div>
+                           @endif
+                           
                         </div>
                     </div>
                 </div>

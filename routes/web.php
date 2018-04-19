@@ -20,4 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('crear', 'RegistroController@create');
 
+Route::post('registro', 'RegistroController@store');

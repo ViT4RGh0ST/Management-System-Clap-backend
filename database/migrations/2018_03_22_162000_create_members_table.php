@@ -16,8 +16,10 @@ class CreateMembersTable extends Migration
         Schema::create('miembros', function (Blueprint $table) {
             $table->increments('id');
             $table->string('cedula');
-            $table->string('nombres');
-            $table->string('apellidos');
+            $table->string('primer_nombre');
+            $table->string('segundo_nombre');
+            $table->string('primer_apellido');
+            $table->string('segundo_apellido');
             $table->string('nacionalidad', 1);
             $table->date('fecha_nacimiento');
             $table->string('sexo', 1);
