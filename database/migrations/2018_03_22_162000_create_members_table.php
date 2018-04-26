@@ -35,7 +35,6 @@ class CreateMembersTable extends Migration
             $table->string('nivel_instruccion');         
             $table->string('es_empleado');   
             $table->string('profesion'); 
-            $table->string('tipo_institucion');        
             $table->string('embarazo_precoz', 1);       
             $table->string('clasificacion_ingreso');
             $table->float('ingreso', 8,3);

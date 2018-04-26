@@ -43,29 +43,29 @@
                                   
 
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" id="form_nombre" name="primer_nombre" autocomplete="off" class="" maxlength="30">
+                                        <input type="text" id="form_nombre1" name="primer_nombre" autocomplete="off" class="" maxlength="30">
                                         
-                                        <label class="" for="form_nombre">Primer Nombre</label>
+                                        <label class="" for="form_nombre1">Primer Nombre</label>
                                         
                                     </div>
 
                                      <div class="input-field col s12 m6 l3">
-                                        <input type="text" id="form_nombre" name="segundo_nombre" autocomplete="off" class="" maxlength="30">
-                                        <label class="" for="form_nombre">Segundo Nombre</label>
+                                        <input type="text" id="form_nombre2" name="segundo_nombre" autocomplete="off" class="" maxlength="30">
+                                        <label class="" for="form_nombre2">Segundo Nombre</label>
                                     </div>
 
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" id="form_apellido" name="primer_apellido" autocomplete="off" class="" maxlength="30">
-                                        <label class="" for="form_apellido">Primer Apellido</label>
+                                        <input type="text" id="form_apellido1" name="primer_apellido" autocomplete="off" class="" maxlength="30">
+                                        <label class="" for="form_apellido1">Primer Apellido</label>
                                     </div>
 
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" id="form_apellido" name="segundo_apellido" autocomplete="off" class="" maxlength="30">
-                                        <label class="" for="form_apellido">Segundo Apellido</label>
+                                        <input type="text" id="form_apellido2" name="segundo_apellido" autocomplete="off" class="" maxlength="30">
+                                        <label class="" for="form_apellido2">Segundo Apellido</label>
                                     </div>
 
                                     <div class="input-field col s12 m6 l3">
-                                        <input type="text" class="datepicker" id="fecha">
+                                        <input type="text" class="datepicker" id="fecha" name="fecha_nacimiento">
                                         <label for="fecha">Fecha de Nacimiento</label>                            
                                     </div>
                                 </div>
@@ -159,7 +159,7 @@
                                                 <label for="radio_penSi">Si</label>
 
                                                 <div class="input-field">
-                                                    <input type="text" disabled id="form_pension" name="tipo_institucion" autocomplete="off" class="class_discap" maxlength="30">
+                                                    <input type="text" disabled id="form_pension" name="tipo_pension" autocomplete="off" class="class_discap" maxlength="30">
                                                     <label for="form_pen">Institución</label>                                    
                                                 </div>
                                             </p>
@@ -261,12 +261,15 @@
                                         
 
                                         <div class="col s3">
+                                           
                                             <input type="radio" class="with-gap" id="form_trab1" name="es_empleado" class="" autocomplete="off">
                                             <label for="form_trab1">Si</label>
 
                                             <input type="radio" class="with-gap" id="form_trab2" name="es_empleado" class="" autocomplete="off">
                                             <label for="form_trab2">No</label>
+
                                         </div>
+
                                     </div>
 
                                     <div class="row">
@@ -296,7 +299,12 @@
                                             
                                                 <input type="radio" class="with-gap" id="form_ingres5" name="clasificacion_ingreso" autocomplete="off">
                                                 <label for="form_ingres5">Por Trabajo Realizado</label>                                  
-                                        </div>                               
+                                        </div>   
+                                              <div class="input-field col s6">
+                                            <input type="text" id="form_ingreso" name="ingreso" class="" autocomplete="off">
+                                            <label for="form_ingreso">Ingreso</label>
+                                        </div>        
+                                                      
                                     </div>         
                                 </div>
 
