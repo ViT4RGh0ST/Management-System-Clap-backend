@@ -4,9 +4,12 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Blade;
+
 
 class AppServiceProvider extends ServiceProvider
 {
+
     /**
      * Bootstrap any application services.
      *
@@ -15,6 +18,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+
+        Blade::component('componentes.modal', 'modal');
         Schema::defaultStringLength(191);
     }
 
