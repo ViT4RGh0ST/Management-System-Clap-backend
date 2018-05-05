@@ -26,9 +26,7 @@ mix.scripts([
    	'resources/assets/css/materialize.min.css',
    	'resources/assets/css/dataTables.materialize.css',
    	'resources/assets/css/material-icons.css',
-   	'resources/assets/css/main.min.css',
-   	'resources/assets/css/fonts.css',
-   	'resources/assets/css/style.css',
+   	
    	'resources/assets/css/app.css'
 
    	], 'public/css/app.css');

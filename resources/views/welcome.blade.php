@@ -7,7 +7,7 @@
       <div class="container">
         <h1 class="header center red-text">Sistema de Gestion CLAP</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Un moderno sistema de Gestion de CLAP</h5>
+          <h5 class="header col s12 red-text">Un moderno sistema de Gestion de CLAP</h5>
         </div>
         <div class="row center">
           <a class="waves-effect waves-light btn red modal-trigger" href="#modal-registro-jefe">Registro</a>
@@ -112,35 +112,20 @@
   @endslot
   @endmodal
   
-  <footer class="page-footer red">
-      <div class="row">
-        <div class="col s12 m4">
-          <h5 class="white-text">Biografia</h5>
-          <p class="grey-text text-lighten-4">Somos un equipo de estudiantes universitarios que trabajan en este
-            proyecto para apoyar a nuestras comunidades que mas lo necesitan. Cualquier cantidad ayudaría a apoyar y
-            continuar el desarrollo de este proyecto y es muy apreciado.</p>
-        
-        
-        </div>
-        <div class="col s12 m4">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col s12 m3">
-          <h5 class="white-text">Siguenos</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-  </footer>
-
+  <style>
+    .modal{
+      width: 80%;
+    }
+  </style>
+  <script>
+      function nacion(){
+          var cedula = document.getElementById('cedula').value;
+          var nacional = document.getElementById('nacionalidad');
+          if(cedula>80000000){
+              nacional.value = 'E'
+          }else{
+              nacional.value = 'V'
+          }
+      }
+  </script>
 @endsection
