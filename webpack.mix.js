@@ -29,7 +29,6 @@ mix.scripts([
    	'resources/assets/css/main.min.css',
    	'resources/assets/css/fonts.css',
    	'resources/assets/css/style.css',
-   	'resources/assets/css/app.css',
-
+   	'resources/assets/css/app.css'
 
    	], 'public/css/app.css');

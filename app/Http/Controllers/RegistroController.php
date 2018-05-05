@@ -8,15 +8,15 @@ class RegistroController extends Controller
 {
     //
     public function create()
-{
-   return view('home');
-}
+    {
+       return view('home');
+    }
 
 
-    public function store(Request $request)
+    public function guardar(Request $request)
     {
 
-    	$validatedData = $request->validate([
+    	$this->validate($request, [
         'cedula'=>'required|unique:miembros|digits_between:1,11',
         'primer_nombre'=>'required|alpha|min:4',
         'segundo_nombre'=>'required|alpha|min:4',
@@ -26,8 +26,8 @@ class RegistroController extends Controller
         'sexo'=>'required',
         'cne'=>'required',
         'tiempo_comunidad'=>'required|digits:2',
-        'tipo_discapacidad'=>'required|alpha',
-        'tipo_pension'=>'required|alpha',
+        'discapacidad'=>'required|alpha',
+        'pension'=>'required|alpha',
         'estado_civil'=>'required',
         'numero_celular'=>'required|unique:miembros|digits_between:1,11',
         'numero_oficina'=>'required|digits_between:1,11',
@@ -36,10 +36,9 @@ class RegistroController extends Controller
         'nivel_instruccion'=>'required',
         'es_empleado'=>'required',
         'profesion'=>'required|alpha',
-        'embarazo_precoz'=>'required',
-        'clasificacion_ingreso'=>'required|alpha',
         'ingreso'=>'required|numeric',
-    
+        'clasificacion_ingreso'=>'required|string',
+
    ]);
         
     }

@@ -22,4 +22,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('crear', 'RegistroController@create');
 
-Route::post('registro', 'RegistroController@store');
+Route::post('/registrarse', 'RegistroController@store');

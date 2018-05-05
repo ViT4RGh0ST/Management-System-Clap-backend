@@ -20,22 +20,20 @@ class CreateMembersTable extends Migration
             $table->string('segundo_nombre');
             $table->string('primer_apellido');
             $table->string('segundo_apellido');
-            $table->string('nacionalidad', 1);
+            $table->string('nacionalidad');
             $table->date('fecha_nacimiento');
             $table->string('sexo', 1);
-            $table->string('cne', 1);
+            $table->string('cne', 2);
             $table->integer('tiempo_comunidad');
-            $table->string('tipo_discapacidad');
-            $table->string('tipo_pension');
+            $table->string('discapacidad');
+            $table->string('pension');
             $table->string('estado_civil');     
             $table->string('numero_celular');      
             $table->string('numero_oficina'); 
-            $table->string('numero_hogar');     
-            $table->string('correo');
+            $table->string('numero_hogar');
             $table->string('nivel_instruccion');         
             $table->string('es_empleado');   
             $table->string('profesion'); 
-            $table->string('embarazo_precoz', 1);       
             $table->string('clasificacion_ingreso');
             $table->float('ingreso', 8,3);
             
