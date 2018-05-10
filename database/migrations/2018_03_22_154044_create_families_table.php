@@ -16,9 +16,8 @@ class CreateFamiliesTable extends Migration
         Schema::create('familias', function (Blueprint $table) {
             $table->increments('id');
             $table->string('cedula_jefe');
-            $table->string('clasificacion_ingreso');
             $table->string('actividad_comercial');      
-            $table->float('ingreso_mensual', 8,3);
+            $table->float('ingreso_mensual', 20,3)->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateFamiliesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('families');
+        Schema::dropIfExists('familias');
     }
 }

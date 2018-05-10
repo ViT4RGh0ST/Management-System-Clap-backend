@@ -16,10 +16,11 @@ Route::get('/', function () {
 });
 
 
-
+// rutas de autenticacion
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('crear', 'RegistroController@create');
 
-Route::post('/registrarse', 'RegistroController@store');
+
+//rutas de registro
+Route::post('/registrarse', 'RegistroController@guardar')->name('registro');

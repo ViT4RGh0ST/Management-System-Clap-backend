@@ -1,14 +1,4 @@
 $(document).ready(function () {
-    $('.dropdown-button-custom').dropdown({
-        inDuration: 300,
-        outDuration: 225,
-        constrainWidth: true, // Does not change width of dropdown to that of the activator
-        hover: false, // Activate on hover
-        gutter: 0, // Spacing from edge
-        belowOrigin: true, // Displays dropdown below the button
-        alignment: 'right', // Displays dropdown with edge aligned to the left of button
-        stopPropagation: true // Stops event propagation
-    });
 
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
@@ -17,7 +7,7 @@ $(document).ready(function () {
         today: false,
         clear: false,
         close: 'Enviar',
-        format: 'dd/mm/yyyy',
+        format: 'yyyy/mm/dd',
         monthsFull: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
         monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
         weekdaysFull: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],

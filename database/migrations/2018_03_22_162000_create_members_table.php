@@ -29,19 +29,18 @@ class CreateMembersTable extends Migration
             $table->string('pension');
             $table->string('estado_civil');     
             $table->string('numero_celular');      
-            $table->string('numero_oficina'); 
+            $table->string('numero_oficina')->nullable();
             $table->string('numero_hogar');
             $table->string('nivel_instruccion');         
             $table->string('es_empleado');   
             $table->string('profesion'); 
             $table->string('clasificacion_ingreso');
-            $table->float('ingreso', 8,3);
-            
+            $table->float('ingreso', 20,3);
+            $table->string('parentesco')->nullable();
+
             $table->timestamps();
 
-            $table->integer('id_familia')->unsigned();
 
-            $table->foreign('id_familia')->references('id')->on('familias');
         });
     }
 
@@ -52,6 +51,7 @@ class CreateMembersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('members');
+
+        Schema::dropIfExists('miembros');
     }
 }
